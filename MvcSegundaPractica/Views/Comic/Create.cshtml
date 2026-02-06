@@ -1,0 +1,24 @@
+﻿@section style {
+    <style>
+        form {
+            width: 50%;
+            margin: auto;
+            text-align: center
+        }
+    </style>
+}
+<h1>Crear Comic</h1>
+
+<form method="post">
+    <label class="form-label">Nombre:</label>
+    <input type="text" name="nombre" class="form-control" />
+    <label class="form-label">Imagen:</label>
+    <input type="text" name="imagen" class="form-control" />
+    <label class="form-label">Descripcion:</label>
+    <input type="text" name="descripcion" class="form-control" />
+    <br />
+    <button class="btn btn-info">Insertar</button>
+</form>
+
+<hr />
+<a asp-controller="Comic" asp-action="Index" class="btn btn-outline-dark">Back to Index</a>

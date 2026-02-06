@@ -1,0 +1,13 @@
+﻿@model Comic
+
+<h1>Detalles del comic</h1>
+<hr />
+<p><a asp-controller="Comic" asp-action="Index">Back to Index</a></p>
+
+<ul class ="list-group">
+    <li class="list-group-item"><strong>Id:</strong>@Model.IdComic </li>
+    <li class="list-group-item"><strong>Nombre: </strong>Nombre: @Model.Nombre </li>
+    <li class="list-group-item"><strong>Imagen: </strong><img src="@Model.Imagen" style="width:100px" /></li>
+    <li class="list-group-item"><strong>Descripcion: </strong>@Model.Descripcion </li>
+</ul>
+

@@ -1,0 +1,34 @@
+﻿@model List<Comic>
+@section style{
+    <style>
+
+    </style>
+}
+<h1>Comics</h1>
+@if(Model != null)
+{
+    <br />
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id Comic</th>
+                <th>Nombre</th>
+                <th>Imagen</th>
+                <th>Descripcion</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Comic c in Model)
+            {
+                <tr>
+                    <td>@c.IdComic</td>
+                    <td>@c.Nombre</td>
+                    <td><img src="@c.Imagen" style="width:100px"/></td>
+                    <td>@c.Descripcion</td>
+                    <td><a asp-controller="Comic" asp-action="Details" asp-route-id="@c.IdComic" class="btn btn-outline-dark">Detalles</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
